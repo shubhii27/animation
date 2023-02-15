@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+}
+.parent-box{
+    height:400px;
+    width:800px;
+    background-color: yellow;
+}
+.child-box{
+    height:100px;
+    width:100px;
+    background-color: green;
+   animation: move 3s ease-in infinite forwards;
+}
+@keyframes move {
+    0%{
+        transform: translate(0px) rotate(0deg);
+     
+        border-radius: 0px;
+        border:0px solid black;
+        
+    }
+    25%{
+        transform: translateX(715px);
+        background-color: red;
+        border-radius: 25%;
+    }
+
+    50%{
+        transform: translateY(300px) translateX(715px) rotate(180deg);
+       
+        border-radius: 50%;
+        border:25px solid black;
+    }
+    75%{
+        transform: translateX(0px) translateY(300px);
+        border-radius: 75%;
+    }
+
+    100%{
+        transform: translate(0px) rotate(360deg);
+        border:50px solid black;
+        border-radius: 100%;
+        
+    }
+    
+}
+
+.child-box:hover{
+    background-color: red;
+    transform:translateY(200px);
+
+}
